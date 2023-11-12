@@ -20,4 +20,7 @@
 
 **Архитектура движка рендера (webKit)**
 
+Общая схема такая:
+
 ![image](https://github.com/AlinaLaniuk/interview/assets/101401177/10995e17-61d8-45ee-97a8-7f421bd9f2b0)
+
