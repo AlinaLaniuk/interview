@@ -43,4 +43,19 @@ new Promise((resolve, reject) => resolve('sun')).then((result) => result);
 Результат - резолвнутый промис со значением 'sun'.
 
 ```
+Promise.reject(new Error('oops')).then((result) => {return result}, (error) => {return error});
 ```
+Результат - резолвнутый промис, значение - объект ошибки. Так происходит потому, что вторая фнукция then (на отклонение) возвращает ошибку. Из then вернется отклоненный промис, если в функции на отклонения выбрасывается ошибка или возвращается отклоненный промис.
+
+```
+Promise.reject(new Error('oops')).then((result) => {return result}, (error) => {throw error});
+Promise.reject(new Error('oops')).then((result) => {return result}, (error) => {return Promise.reject()});
+```
+
+Результат - отклоненный промис. 
+
+```
+new Promise((resolve, reject) => resolve('sun')).then((result) => Promise.resolve('moon'));
+```
+
+Вернется успешно выполненный промис со значением moon. Потому что если ренернить промис, то именно от станет новым значением.
