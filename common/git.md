@@ -41,3 +41,25 @@ Merge добавляет в feature новый коммит, который за
 Имеем те же ветки и те же задачи.
 
 При использовании rebase мы буквально перебазируем нашу ветку feature на последний коммит из main. Это похоже на то, что мы буквально сегодня, вот только что отпочковались от main, с текущего head коммита.
+
+**Что произойдет с хэшами после мержа feature2 в main?**
+
+Вот как выглядит main до PR из feature2
+
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/c187b322-ed88-4731-b826-d6293ca732b7)
+
+
+Вот так feature2
+
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/92c18ed3-0d13-429f-9655-8687b503c07d)
+
+
+После PR:
+
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/c32da53d-5dfa-4476-ad23-647f23265b09)
+
+
+Выглядит так, будто произошло все тоже самое. Но понимать, что rebase меняет хэши в ветке, которая перебазируется на мейн. Создала третью ветку feature3 и добавила в нее коммит. Вот его хэш:
+
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/788c7d0d-9b7a-425b-a746-3b45fb7104e0)
+
