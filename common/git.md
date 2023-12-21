@@ -30,6 +30,9 @@ Merge добавляет в feature новый коммит, который за
 
 ![image](https://github.com/AlinaLaniuk/interview/assets/101401177/dff82ea2-b8a2-4be4-afdc-a238492b8b93)
 
+Новая история коммитов в main объединяет изменения из двух веток. То есть в main попадают все изменения из feature (все коммиты, включая merge коммит). При этом они выстраиваются в последовательности **по времени**.
+
+
 **Rebase**
 
 ![image](https://github.com/AlinaLaniuk/interview/assets/101401177/7f0ae4b9-b6c5-4f91-8542-bf80cfe232cf)
