@@ -61,5 +61,9 @@ Merge добавляет в feature новый коммит, который за
 
 Выглядит так, будто произошло все тоже самое. Но понимать, что rebase меняет хэши в ветке, которая перебазируется на мейн. Создала третью ветку feature3 и добавила в нее коммит. Вот его хэш:
 
-![image](https://github.com/AlinaLaniuk/interview/assets/101401177/788c7d0d-9b7a-425b-a746-3b45fb7104e0)
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/b084b277-0850-40e2-b8a7-2abe5897200c)
+
+Этот же коммит после ребейза:
+
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/e155b92d-b97f-43e3-8a07-8b9c54858f44)
 
