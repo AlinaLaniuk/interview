@@ -20,15 +20,16 @@ Merge добавляет в feature новый коммит, который за
 
 Такие хэши есть в main до pull request.
 
-![image](https://github.com/AlinaLaniuk/interview/assets/101401177/657dcb4c-1065-44ce-a960-c946a3ff123d)
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/37b9ebae-ae1d-4036-a087-f8c554d3e21c)
+
 
 А такие - в feature
 
-![image](https://github.com/AlinaLaniuk/interview/assets/101401177/8cccab2f-8171-44fd-b1b7-5d70b1d82129)
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/650aca99-4833-4fb8-96e5-823ac9189c7e)
 
 А вот так будет выглядеть ветка main после слияния:
 
-![image](https://github.com/AlinaLaniuk/interview/assets/101401177/dff82ea2-b8a2-4be4-afdc-a238492b8b93)
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/5be72c71-c792-42bd-b793-bda5ab754c4a)
 
 Новая история коммитов в main объединяет изменения из двух веток. То есть в main попадают все изменения из feature (все коммиты, включая merge коммит). При этом они выстраиваются в последовательности **по времени**.
 
