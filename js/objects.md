@@ -37,3 +37,14 @@ For...in, Object.keys, Object.values - не перечислит, операто
 ![image](https://github.com/AlinaLaniuk/interview/assets/101401177/091166cd-e93f-47ff-889f-4b87b89cc55b)
 
 6. set. Все тоже самое, что с get, но сеттер.
+
+
+**Нюансы**
+
+- Object.getOwnPropertyDescriptor всегда отдает разный объект. То есть он как бы снимает копию с какого-то внутреннего объекта-дескриптора и отдает. Сам дескриптор зарыт глубоко, чтобы доступ к нему был только через специальные методы.
+
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/cbfef232-1e70-40e0-b257-80a9dadefce4)
+
+- свойство дескриптора enumerable. Когда мы говорим, что через for...in не перебираются прототипные методы объекта, дело не в том, что они прототипные и что-то там внутри хитро настроено. Просто у этих свойств объекта Object.prototype в дескрипторах указано enumerable: false
+
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/ddc60b1b-19b0-44a9-9fe2-b168359ee14a)
