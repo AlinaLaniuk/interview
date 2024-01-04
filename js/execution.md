@@ -28,3 +28,26 @@ Call stack - это термин и часть архитектуры проце
 
 * перевод некоторых частей спеки
 
+# 9 Исполнение кода и Контекст исполнения
+
+Environment Record - это сущность спецификации, определяющая связи идентификаторов с конкретными переменными и функциями, основанная на лексической структуре вложенности js-кода. Чаще всего эта фущность связана с некоторыми синтаксическими структурами js-кода, такими как FunctionDeclaration, BlockStatement, Catch clause of a TryStatement. Каждый раз когда код выполняется, формируется новый Environment Record для связывания всех идентификаторов с конкретными значениями, указанных в этом коде.
+
+Каждый Environment Record имеет поле [[OuterEnv]], которое либо ссылается на null, либо на внешний Environment Record. Используется это поле для формирования логической вложенности таких Environment Record. В этом поле будет храниться ссылка на внешнее окружение, которое логически окружает внутреннее Environment Record. При этом внешнее Environment Record может также содержать ссылку на свое внешнее Environment Record. При этом одно и то же внешнее Environment Record может быть у несколькоих внутренних Environment Record. К примеру, если внутри функции создаются две другие функции, они в качестве внешнего Environment Record будут иметь одну и ту же Environment Record "родительской" функции.
+
+Environment Record - это исключительно механизм спецификации и этот термин никак не коррелирует с любыми артефактами имплементации ECMAScript. В рамках кода программно нельзя никак манипулировать этими понятиями.
+
+**9.1 Иерархия Environment Record**
+
+В качсетве аналогии на Environment Records можно рассматривать обычную объектно-ориентированную иерархию (думаю, здесь говорится о прототипном наследовании). Environment Record здесь - это абстрактный класс, от кторого "наследуют" три конкретных подкласса: Declarative Environment Record, Object Environment Record, and Global Environment Record. Еще два подкласса -  Function Environment Records and Module Environment Records  - это подклассы Declarative Environment Record.
+
+- Declarative Environment Record - используется для определения "эффектов" от FunctionDeclarations, VariableDeclarations, and Catch clauses.
+  Function Environment Record - используется при вызове функции и содержит привязки идентификаторов для этой функции. Может содержать this, а также необходимые сущности для вызова super.
+  Module Environment Record - используется для работы модуля.  [[OuterEnv]] здесь будет содержать ссылку на Global Environment Record.
+
+- Object Environment Record используется для определения WithStatement. Это легаси штука.
+
+- Global Environment Record используется для связи глобальных идентификаторов скрипта. [[OuterEnv]]  указывает на null.
+
+* https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#sec-environment-records - здесь можно посмотреть конкретику по каждому типу. В целом у Environment Record есть ряд внутренних методов, которые наследуют другие records. Каждый из них в свою очередь имеет ряд собственных методов.
+
+
