@@ -14,4 +14,5 @@ baz.call({y:20});
 
 **Схемы**
 
-![Uploading image.png…]()
+![image](https://github.com/AlinaLaniuk/interview/assets/101401177/ed83f640-563d-431f-80b6-c3ff07755852)
+
