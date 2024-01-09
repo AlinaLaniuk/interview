@@ -39,6 +39,8 @@ const user = {
 **Схема**
 
 ![image](https://github.com/AlinaLaniuk/interview/assets/101401177/4dea6741-6a24-4b6c-a084-2baeff184372)
+
+
 ![image](https://github.com/AlinaLaniuk/interview/assets/101401177/ba0e76c5-d35b-4f2a-8c38-3779464a9ec7)
 
 
